@@ -1,0 +1,5550 @@
+{
+  "contract_version": "2026-04-18-perfect-parity-v1",
+  "generated_at": "2026-04-21T14:10:16.312612+00:00",
+  "total": 96,
+  "passed": 96,
+  "failed": 0,
+  "success_rate": 1.0,
+  "capability_success_rate": 1.0,
+  "average_score": 1.0,
+  "quality_metrics": {
+    "decision_quality_score": 0.9792,
+    "edit_correctness_score": 0.9792,
+    "verification_pass_rate": 0.9896,
+    "weighted_quality_score": 0.9813
+  },
+  "quality_dimension_matrix": {
+    "decision_quality": {
+      "score": 0.9792,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "edit_correctness": {
+      "score": 0.9792,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "verification": {
+      "score": 0.9896,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "weighted_quality": {
+      "score": 0.9813,
+      "threshold": 0.9,
+      "passed": true
+    }
+  },
+  "capability_matrix": {
+    "tooling": {
+      "covered": true,
+      "passed": 94,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "orchestration": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "recovery": {
+      "covered": true,
+      "passed": 1,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "verification": {
+      "covered": true,
+      "passed": 95,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "subagent": {
+      "covered": true,
+      "passed": 1,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "semantic_navigation": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_refactor": {
+      "covered": true,
+      "passed": 74,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "mcp": {
+      "covered": true,
+      "passed": 1,
+      "failed": 0,
+      "success_rate": 1.0
+    }
+  },
+  "failure_breakdown": {
+    "environment": 0,
+    "runtime": 0,
+    "capability": 0
+  },
+  "failure_taxonomy": {
+    "model": 0,
+    "tool": 0,
+    "orchestration": 0,
+    "semantic": 0,
+    "verification": 0,
+    "environment": 0
+  },
+  "environment_failure_rate": 0.0,
+  "runtime_failure_rate": 0.0,
+  "capability_failure_rate": 0.0,
+  "details": [
+    {
+      "scenario": "single_file_fix",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "patch_applied",
+          "passed": true
+        },
+        {
+          "name": "old_bug_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-single_file_fix-8dc16d5c8f624fcdade63ba5056fdfe2",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 18.362,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "simple-edit",
+      "status": "passed",
+      "reason": "real read-edit flow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "status_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-simple-edit-b791b5447ee5477f8fcfd15e1ed0e611",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 33.968,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "rename_symbol_single_file",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-rename_symbol_single_file-1fb6adaeda9c45c2887466852f3fe4c7",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.004,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "rename_symbol_multi_file",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "core_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-rename_symbol_multi_file-635b3b221a3b4afcae7a4a36cf996d0b",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 9.305,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "extract_function",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "helper_extracted",
+          "passed": true
+        },
+        {
+          "name": "callsite_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-extract_function-7b7327a6a89142f3b7c6aac9c49f8d48",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.841,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "inline_function",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "inline_call_applied",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-inline_function-ed5a19c5b4874ddc87030f3ad855884c",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.059,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "add_unit_test_for_bugfix",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "test_expectation_fixed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-add_unit_test_for_bugfix-278d547680a8411b9e4e5fc269504bd9",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 0.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 0.55
+      },
+      "duration_ms": 8.083,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 0.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "update_api_contract",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "status_field_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-update_api_contract-ac3f5db080da4825a40ad9dc073fdc04",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.531,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "migrate_config_schema",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "schema_key_migrated",
+          "passed": true
+        },
+        {
+          "name": "legacy_key_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-migrate_config_schema-2ad1d41b650c45228755c9dfad90f282",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.414,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "add_feature_flag_guard",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "guard_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-add_feature_flag_guard-2245038cdf4446c8ae708287c29418e6",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.3,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "resolve_type_error",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "type_safe_math",
+          "passed": true
+        },
+        {
+          "name": "string_add_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-resolve_type_error-d632011aafbc46b29c246f3386a29821",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.995,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "fix_import_cycle",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "lazy_import_applied",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-fix_import_cycle-04c2d55f8a7049469d7eb3e6dd882e2e",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.094,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "add_input_validation",
+      "status": "passed",
+      "reason": "validation patch applied",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "guard_added",
+          "passed": true
+        },
+        {
+          "name": "validation_branch",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-add_input_validation-2be613b6c845493a93c2761bdd669245",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.697,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "propagate_new_argument",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "signature_updated",
+          "passed": true
+        },
+        {
+          "name": "callsite_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-propagate_new_argument-735057303cad42338c221d638a290d3b",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 8.319,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "refactor_shared_helper",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "shared_helper_reused",
+          "passed": true
+        },
+        {
+          "name": "duplicate_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-refactor_shared_helper-7dfb49e8dfe24f6bacf4c3816d4a0626",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.883,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "update_cli_command_behavior",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "version_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-update_cli_command_behavior-cc718908ac2e4770a3b9285af9ed23c2",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.564,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "introduce_new_tool_integration",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "tool_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-introduce_new_tool_integration-f42fb29734f44091bf090d0c698288f6",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.742,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "repair_broken_snapshot_test",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "snapshot_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-repair_broken_snapshot_test-d5abb8ee0be8458eb02c23137e78f802",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.365,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "upgrade_dependency_usage",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "dependency_updated",
+          "passed": true
+        },
+        {
+          "name": "legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-upgrade_dependency_usage-cd9d2b93ee214b0a96b2e0b758f85764",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.298,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "handle_async_timeout_path",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "timeout_handling_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-handle_async_timeout_path-30fc144946064c09a8c90f45b2305800",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 5.816,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "improve_error_message_surface",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "error_message_improved",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-improve_error_message_surface-70a8667eddae4616ab84ce8aea57881a",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 5.689,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "implement_retry_backoff",
+      "status": "passed",
+      "reason": "retry backoff updated",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "backoff_logic",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-implement_retry_backoff-40fedf0400414c9f9182d50442d6c3d4",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.099,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "remove_dead_code_path",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "dead_branch_removed",
+          "passed": true
+        },
+        {
+          "name": "live_branch_kept",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-remove_dead_code_path-144cdfb83c344019bbacf90af711a562",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.955,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "add_observability_trace",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "trace_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-add_observability_trace-8b82ada400da4146b357008c1a992fe9",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 5.716,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "patch_security_sanitization",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "escape_applied",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-patch_security_sanitization-129856c491034cf4bce8bd70eb1923fe",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.46,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "stabilize_flaky_test",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "assertion_stabilized",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-stabilize_flaky_test-8c5c983ef9934e479ff7547f538dab6d",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.773,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "adjust_permission_policy_branch",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "policy_adjusted",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-adjust_permission_policy_branch-e561ff19aea347a5b192ca1264b6bb03",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.084,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "add_mcp_resource_reader",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "resource_reader_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-add_mcp_resource_reader-66bc0e2fdccb49fea38c5b5479f24979",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 7.034,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "optimize_query_compaction",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "budget_window_added",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-optimize_query_compaction-5f383f58d5ac4be68b94de86a56ab5a7",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.482,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "inject_memory_retrieval_context",
+      "status": "passed",
+      "reason": "real edit workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "memory_injected",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-inject_memory_retrieval_context-ea941e5283054cb8bf38629cd60cb4f0",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 5.772,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "implement_verification_gate",
+      "status": "passed",
+      "reason": "verification gate enforced",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "blocked_without_verification",
+          "passed": true
+        },
+        {
+          "name": "gate_reason_present",
+          "passed": true
+        }
+      ],
+      "duration_ms": 1.293,
+      "decision_quality_score": 0.0,
+      "edit_correctness_score": 0.0,
+      "verification_pass_rate": 1.0,
+      "quality_metrics": {
+        "decision_quality_score": 0.0,
+        "edit_correctness_score": 0.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 0.2
+      }
+    },
+    {
+      "scenario": "worktree_cleanup_regression",
+      "status": "passed",
+      "reason": "worktree lifecycle executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "worktree_created",
+          "passed": true
+        },
+        {
+          "name": "auto_cleanup_returns_reason",
+          "passed": true
+        }
+      ],
+      "duration_ms": 43.105,
+      "decision_quality_score": 0.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 0.0,
+      "quality_metrics": {
+        "decision_quality_score": 0.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 0.0,
+        "weighted_quality_score": 0.45
+      }
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_01",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_01-c6f7d9ea875a443c965c8f60669c7969",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_01.py').read_text(encoding='utf-8'); h=Path(r'src/module_01_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_01' in m and 'modern_flow_01' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_01 to modern_flow_01 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 83.867,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_02",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_02-4c88fe83a74a4aa9817bebfb5d079c49",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_02.py').read_text(encoding='utf-8'); h=Path(r'src/module_02_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_02' in m and 'modern_flow_02' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_02 to modern_flow_02 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 86.691,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_03",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_03-238f5586baff49119551efe750a34028",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_03.py').read_text(encoding='utf-8'); h=Path(r'src/module_03_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_03' in m and 'modern_flow_03' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_03 to modern_flow_03 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 81.08,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_04",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_04-88165eddf7494a1eafb469dbd97d7951",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_04.py').read_text(encoding='utf-8'); h=Path(r'src/module_04_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_04' in m and 'modern_flow_04' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_04 to modern_flow_04 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 89.379,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_05",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_05-7aa98d84a41540f7a9f11358afaf446e",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_05.py').read_text(encoding='utf-8'); h=Path(r'src/module_05_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_05' in m and 'modern_flow_05' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_05 to modern_flow_05 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 78.295,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_06",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_06-7908e6e3f52b40278d5a5c550bf3242f",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_06.py').read_text(encoding='utf-8'); h=Path(r'src/module_06_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_06' in m and 'modern_flow_06' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_06 to modern_flow_06 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 74.357,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_07",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_07-a209cb65582c4167acb32d576aab50fa",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_07.py').read_text(encoding='utf-8'); h=Path(r'src/module_07_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_07' in m and 'modern_flow_07' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_07 to modern_flow_07 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 78.012,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_08",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_08-1ae79cfc8b994e5a94564407659f7770",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_08.py').read_text(encoding='utf-8'); h=Path(r'src/module_08_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_08' in m and 'modern_flow_08' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_08 to modern_flow_08 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 71.601,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_09",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_09-35b792d6ae8b49708bea42a79a3296b8",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_09.py').read_text(encoding='utf-8'); h=Path(r'src/module_09_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_09' in m and 'modern_flow_09' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_09 to modern_flow_09 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 74.521,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_10",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_10-6d8c9a4917ca48de95e29b2931ab9514",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_10.py').read_text(encoding='utf-8'); h=Path(r'src/module_10_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_10' in m and 'modern_flow_10' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_10 to modern_flow_10 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 70.662,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_11",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_11-d07f5213c6224bd08e5a46fff08c814b",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_11.py').read_text(encoding='utf-8'); h=Path(r'src/module_11_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_11' in m and 'modern_flow_11' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_11 to modern_flow_11 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 71.948,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_12",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_12-a5daf4ad9c044814afb44f2e1d1ddf22",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_12.py').read_text(encoding='utf-8'); h=Path(r'src/module_12_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_12' in m and 'modern_flow_12' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_12 to modern_flow_12 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 78.385,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_13",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_13-09a66ee4ddb24876a02f5e7a5234bb22",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_13.py').read_text(encoding='utf-8'); h=Path(r'src/module_13_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_13' in m and 'modern_flow_13' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_13 to modern_flow_13 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 81.718,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_14",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_14-d816b7ca46ee44588e07954d74fd400f",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_14.py').read_text(encoding='utf-8'); h=Path(r'src/module_14_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_14' in m and 'modern_flow_14' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_14 to modern_flow_14 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 106.678,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_15",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_15-040fac2c7ab0427da10ea31d7aa9fcad",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_15.py').read_text(encoding='utf-8'); h=Path(r'src/module_15_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_15' in m and 'modern_flow_15' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_15 to modern_flow_15 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 98.898,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_16",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_16-a3a74c886f2f4771a7e56f8eabe86310",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_16.py').read_text(encoding='utf-8'); h=Path(r'src/module_16_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_16' in m and 'modern_flow_16' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_16 to modern_flow_16 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 79.527,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_17",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_17-723e1d3ce5a644828a996ea1a3eb3834",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_17.py').read_text(encoding='utf-8'); h=Path(r'src/module_17_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_17' in m and 'modern_flow_17' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_17 to modern_flow_17 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 80.626,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_18",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_18-1c7c0811ecef42f78b5c19707679303d",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_18.py').read_text(encoding='utf-8'); h=Path(r'src/module_18_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_18' in m and 'modern_flow_18' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_18 to modern_flow_18 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 79.978,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_19",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_19-7bf54896c8ce4cdf98d52bcf864eb0f9",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_19.py').read_text(encoding='utf-8'); h=Path(r'src/module_19_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_19' in m and 'modern_flow_19' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_19 to modern_flow_19 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 79.677,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_20",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_20-24d7f5d9d7814a7e85a4b8b989a38296",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_20.py').read_text(encoding='utf-8'); h=Path(r'src/module_20_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_20' in m and 'modern_flow_20' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_20 to modern_flow_20 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 79.923,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_21",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_21-2a007767fca74eab9240f8026ff54690",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_21.py').read_text(encoding='utf-8'); h=Path(r'src/module_21_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_21' in m and 'modern_flow_21' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_21 to modern_flow_21 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 83.492,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_22",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_22-47a8fa1ffa744d68915a99abe174ad65",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_22.py').read_text(encoding='utf-8'); h=Path(r'src/module_22_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_22' in m and 'modern_flow_22' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_22 to modern_flow_22 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 79.66,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_23",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_23-d65270e4f6184cc1a2b20276b290e906",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_23.py').read_text(encoding='utf-8'); h=Path(r'src/module_23_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_23' in m and 'modern_flow_23' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_23 to modern_flow_23 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 72.417,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_24",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_24-e905e17ee48a4bb0a1fd7928e0345900",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_24.py').read_text(encoding='utf-8'); h=Path(r'src/module_24_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_24' in m and 'modern_flow_24' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_24 to modern_flow_24 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 82.788,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_25",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_25-30fb8ddf9d564dd1ae1dc26fc5246f6c",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_25.py').read_text(encoding='utf-8'); h=Path(r'src/module_25_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_25' in m and 'modern_flow_25' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_25 to modern_flow_25 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 64.253,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_26",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_26-c9272680f99549aea88ccbdb18e30a8d",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_26.py').read_text(encoding='utf-8'); h=Path(r'src/module_26_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_26' in m and 'modern_flow_26' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_26 to modern_flow_26 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 66.513,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_27",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_27-ca605582a60d497890a330a3ff7bf774",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_27.py').read_text(encoding='utf-8'); h=Path(r'src/module_27_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_27' in m and 'modern_flow_27' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_27 to modern_flow_27 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 67.166,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_28",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_28-70d53c0ade504e398be20acb4a2dfae0",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_28.py').read_text(encoding='utf-8'); h=Path(r'src/module_28_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_28' in m and 'modern_flow_28' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_28 to modern_flow_28 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 87.755,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_29",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_29-48b3dfe5502c4b14a1142585bfe8dc3a",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_29.py').read_text(encoding='utf-8'); h=Path(r'src/module_29_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_29' in m and 'modern_flow_29' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_29 to modern_flow_29 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 80.987,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_30",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_30-ff6225df8f6440ccb14bca029275a475",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_30.py').read_text(encoding='utf-8'); h=Path(r'src/module_30_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_30' in m and 'modern_flow_30' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_30 to modern_flow_30 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 73.145,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_31",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_31-0b18ecaa78a64b0d94da9847120a9947",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_31.py').read_text(encoding='utf-8'); h=Path(r'src/module_31_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_31' in m and 'modern_flow_31' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_31 to modern_flow_31 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 88.326,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_32",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_32-0a09660fc17b4f8cbd4a239627435c05",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_32.py').read_text(encoding='utf-8'); h=Path(r'src/module_32_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_32' in m and 'modern_flow_32' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_32 to modern_flow_32 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 88.9,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_33",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_33-71f16cfc8832439e97ee5face56f7f5f",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_33.py').read_text(encoding='utf-8'); h=Path(r'src/module_33_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_33' in m and 'modern_flow_33' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_33 to modern_flow_33 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 98.512,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_34",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_34-52a7af38e26a458095a76ccdaf09ac4d",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_34.py').read_text(encoding='utf-8'); h=Path(r'src/module_34_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_34' in m and 'modern_flow_34' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_34 to modern_flow_34 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 85.765,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_35",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_35-c227da95cf2c44e4a48a684a7f683d3c",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_35.py').read_text(encoding='utf-8'); h=Path(r'src/module_35_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_35' in m and 'modern_flow_35' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_35 to modern_flow_35 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 81.313,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_36",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_36-0100fc7005e54f79a2286784ae6a11ce",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_36.py').read_text(encoding='utf-8'); h=Path(r'src/module_36_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_36' in m and 'modern_flow_36' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_36 to modern_flow_36 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 89.645,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_37",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_37-6063fa24544e4b5fbb54ec3b2342c7dd",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_37.py').read_text(encoding='utf-8'); h=Path(r'src/module_37_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_37' in m and 'modern_flow_37' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_37 to modern_flow_37 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 75.258,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_38",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_38-1bafb6993e754a4784d47150b88273c9",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_38.py').read_text(encoding='utf-8'); h=Path(r'src/module_38_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_38' in m and 'modern_flow_38' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_38 to modern_flow_38 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 81.623,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_39",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_39-7addab862d55489591b903f4c94905bb",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_39.py').read_text(encoding='utf-8'); h=Path(r'src/module_39_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_39' in m and 'modern_flow_39' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_39 to modern_flow_39 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 67.949,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_40",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_40-fd44225b3d5e4e3a977a2572331751be",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_40.py').read_text(encoding='utf-8'); h=Path(r'src/module_40_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_40' in m and 'modern_flow_40' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_40 to modern_flow_40 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 87.61,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_41",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_41-14bd4743b6e5431e98f1ed046faaf7d1",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_41.py').read_text(encoding='utf-8'); h=Path(r'src/module_41_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_41' in m and 'modern_flow_41' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_41 to modern_flow_41 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 80.303,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_42",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_42-ad1df35af8df4b27a72bfb04d603d341",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_42.py').read_text(encoding='utf-8'); h=Path(r'src/module_42_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_42' in m and 'modern_flow_42' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_42 to modern_flow_42 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 81.931,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_43",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_43-a650567e0d4d4892baa8724cc69591fc",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_43.py').read_text(encoding='utf-8'); h=Path(r'src/module_43_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_43' in m and 'modern_flow_43' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_43 to modern_flow_43 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 72.233,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_44",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_44-8fee72c8370c4797b83dcd83db674295",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_44.py').read_text(encoding='utf-8'); h=Path(r'src/module_44_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_44' in m and 'modern_flow_44' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_44 to modern_flow_44 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 77.695,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_45",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_45-6bd9d30257ff4045a6986ce9f5a72dd0",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_45.py').read_text(encoding='utf-8'); h=Path(r'src/module_45_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_45' in m and 'modern_flow_45' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_45 to modern_flow_45 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 70.167,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_46",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_46-9e94cf99383b495ead108375dfac4342",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_46.py').read_text(encoding='utf-8'); h=Path(r'src/module_46_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_46' in m and 'modern_flow_46' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_46 to modern_flow_46 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 72.371,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_47",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_47-59ad10fb5b4d4cbda496a3237d19d31c",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_47.py').read_text(encoding='utf-8'); h=Path(r'src/module_47_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_47' in m and 'modern_flow_47' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_47 to modern_flow_47 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 83.807,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "real_repo_multi_file_refactor_48",
+      "status": "passed",
+      "reason": "real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "handler_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "legacy_symbol_removed",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-real_repo_multi_file_refactor_48-dfbf1205ef0645069da5772f399ffdc9",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/module_48.py').read_text(encoding='utf-8'); h=Path(r'src/module_48_handler.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_flow_48' in m and 'modern_flow_48' in h else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "Rename legacy_flow_48 to modern_flow_48 across module and handler, then verify callsites are consistent.",
+      "duration_ms": 77.124,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_01",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_01-5e7a1c51ae834f61ae79337c16477103",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_01.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_01_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_01' in m and 'modern_blind_flow_01' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/memory/__init__.py), rename legacy_blind_flow_01 to modern_blind_flow_01 across module and usage files, then verify callsites.",
+      "duration_ms": 74.756,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_02",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_02-2ffcf37324d3495fa834adc2487a0097",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_02.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_02_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_02' in m and 'modern_blind_flow_02' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/editing/__init__.py), rename legacy_blind_flow_02 to modern_blind_flow_02 across module and usage files, then verify callsites.",
+      "duration_ms": 71.916,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_03",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_03-ad4786b823cb43d2bdceae3e16a3658c",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_03.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_03_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_03' in m and 'modern_blind_flow_03' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/subagents/catalog.py), rename legacy_blind_flow_03 to modern_blind_flow_03 across module and usage files, then verify callsites.",
+      "duration_ms": 85.556,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_04",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_04-897518b03be4403aa06748c5ca4be75f",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_04.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_04_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_04' in m and 'modern_blind_flow_04' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (tests/python_agent/test_mcp_phase6.py), rename legacy_blind_flow_04 to modern_blind_flow_04 across module and usage files, then verify callsites.",
+      "duration_ms": 79.655,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_05",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_05-9d1b9e77f9194a9fa8af9d678811dad5",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_05.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_05_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_05' in m and 'modern_blind_flow_05' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/verification/runner.py), rename legacy_blind_flow_05 to modern_blind_flow_05 across module and usage files, then verify callsites.",
+      "duration_ms": 72.445,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_06",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_06-cef5549f37ee4e1fa1f1fddef2f8c2b6",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_06.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_06_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_06' in m and 'modern_blind_flow_06' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/semantic/lsp_client.py), rename legacy_blind_flow_06 to modern_blind_flow_06 across module and usage files, then verify callsites.",
+      "duration_ms": 88.177,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_07",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_07-fb7247cbb62541728d100c6bc631b1c3",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_07.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_07_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_07' in m and 'modern_blind_flow_07' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/tools/exit_worktree_tool.py), rename legacy_blind_flow_07 to modern_blind_flow_07 across module and usage files, then verify callsites.",
+      "duration_ms": 92.02,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_08",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_08-10a816a3dcdc48b2978edf3ed055b293",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_08.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_08_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_08' in m and 'modern_blind_flow_08' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/permissions/models.py), rename legacy_blind_flow_08 to modern_blind_flow_08 across module and usage files, then verify callsites.",
+      "duration_ms": 85.851,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_09",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_09-3032293c1473448fb71a2d0db80c63c9",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_09.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_09_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_09' in m and 'modern_blind_flow_09' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (tests/python_agent/test_contracts.py), rename legacy_blind_flow_09 to modern_blind_flow_09 across module and usage files, then verify callsites.",
+      "duration_ms": 83.088,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_10",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_10-f6237e56801d43c194000ab76b713a2a",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_10.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_10_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_10' in m and 'modern_blind_flow_10' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/context/__init__.py), rename legacy_blind_flow_10 to modern_blind_flow_10 across module and usage files, then verify callsites.",
+      "duration_ms": 79.625,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_11",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_11-c063cb678b50438092c670d7a05fb2f4",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_11.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_11_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_11' in m and 'modern_blind_flow_11' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/verification/policy.py), rename legacy_blind_flow_11 to modern_blind_flow_11 across module and usage files, then verify callsites.",
+      "duration_ms": 77.647,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_12",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_12-b9cefa92fb8d4749856d9309e94a69df",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_12.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_12_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_12' in m and 'modern_blind_flow_12' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/tools/ask_user_question_tool.py), rename legacy_blind_flow_12 to modern_blind_flow_12 across module and usage files, then verify callsites.",
+      "duration_ms": 78.6,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_13",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_13-eb124dd585e84e54a937c41545cce0f9",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_13.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_13_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_13' in m and 'modern_blind_flow_13' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/mcp_integration/stdio_transport.py), rename legacy_blind_flow_13 to modern_blind_flow_13 across module and usage files, then verify callsites.",
+      "duration_ms": 75.26,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_14",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_14-738c93ef9817458e83ca2a5df351d74f",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_14.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_14_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_14' in m and 'modern_blind_flow_14' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (tests/python_agent/test_agent_task_flow.py), rename legacy_blind_flow_14 to modern_blind_flow_14 across module and usage files, then verify callsites.",
+      "duration_ms": 67.813,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_15",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_15-aadfaa14eb644e258e04cef4c429e321",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_15.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_15_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_15' in m and 'modern_blind_flow_15' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/workspace_isolation/git_worktree.py), rename legacy_blind_flow_15 to modern_blind_flow_15 across module and usage files, then verify callsites.",
+      "duration_ms": 80.443,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_16",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_16-a33b4bd616be4a10b50ee518963173d3",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_16.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_16_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_16' in m and 'modern_blind_flow_16' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (tests/python_agent/test_parity_preflight.py), rename legacy_blind_flow_16 to modern_blind_flow_16 across module and usage files, then verify callsites.",
+      "duration_ms": 90.487,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    }
+  ],
+  "unresolved_gaps": [],
+  "preflight": {
+    "status": "passed",
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "reason": "ok",
+    "checks": [
+      {
+        "name": "workspace_writable",
+        "passed": true,
+        "detail": "workspace writable: D:\\ai-agent\\claude-code-py\\.parity-workspaces"
+      },
+      {
+        "name": "python_executable",
+        "passed": true,
+        "detail": "python executable available"
+      },
+      {
+        "name": "git_available",
+        "passed": true,
+        "detail": "git available"
+      },
+      {
+        "name": "shell_exec",
+        "passed": true,
+        "detail": "shell executable"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+from __future__ import annotations
+
+PLANNER_ROLE = "plan"
+IMPLEMENTER_ROLE = "implement"
+REVIEWER_ROLE = "review"
+VERIFIER_ROLE = "verify"
+AUTOFIX_ROLE = "autofix"
+
+DEFAULT_PHASES = [PLANNER_ROLE, IMPLEMENTER_ROLE, REVIEWER_ROLE, VERIFIER_ROLE]

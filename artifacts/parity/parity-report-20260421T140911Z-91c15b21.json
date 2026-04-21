@@ -1,0 +1,153 @@
+{
+  "contract_version": "2026-04-18-perfect-parity-v1",
+  "generated_at": "2026-04-21T14:09:11.942088+00:00",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "success_rate": 0.0,
+  "capability_success_rate": 0.0,
+  "average_score": 0.0,
+  "quality_metrics": {
+    "decision_quality_score": 0.0,
+    "edit_correctness_score": 0.0,
+    "verification_pass_rate": 0.0,
+    "weighted_quality_score": 0.0
+  },
+  "quality_dimension_matrix": {
+    "decision_quality": {
+      "score": 0.0,
+      "threshold": 0.9,
+      "passed": false
+    },
+    "edit_correctness": {
+      "score": 0.0,
+      "threshold": 0.9,
+      "passed": false
+    },
+    "verification": {
+      "score": 0.0,
+      "threshold": 0.9,
+      "passed": false
+    },
+    "weighted_quality": {
+      "score": 0.0,
+      "threshold": 0.9,
+      "passed": false
+    }
+  },
+  "capability_matrix": {
+    "tooling": {
+      "covered": true,
+      "passed": 0,
+      "failed": 1,
+      "success_rate": 0.0
+    },
+    "orchestration": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "recovery": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "verification": {
+      "covered": true,
+      "passed": 0,
+      "failed": 1,
+      "success_rate": 0.0
+    },
+    "subagent": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_navigation": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_refactor": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "mcp": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    }
+  },
+  "failure_breakdown": {
+    "environment": 1,
+    "runtime": 0,
+    "capability": 0
+  },
+  "failure_taxonomy": {
+    "model": 0,
+    "tool": 0,
+    "orchestration": 0,
+    "semantic": 0,
+    "verification": 0,
+    "environment": 1
+  },
+  "environment_failure_rate": 1.0,
+  "runtime_failure_rate": 0.0,
+  "capability_failure_rate": 0.0,
+  "details": [
+    {
+      "scenario": "single_file_fix",
+      "status": "failed",
+      "reason": "environment_blocked: workspace_writable failed",
+      "score": 0.0,
+      "duration_ms": 0.0,
+      "checks": [
+        {
+          "name": "preflight_gate",
+          "passed": false
+        }
+      ],
+      "verification": {
+        "status": "skipped",
+        "workdir": "",
+        "results": [],
+        "reason": "environment_blocked"
+      },
+      "decision_quality_score": 0.0,
+      "edit_correctness_score": 0.0,
+      "verification_pass_rate": 0.0,
+      "quality_metrics": {
+        "decision_quality_score": 0.0,
+        "edit_correctness_score": 0.0,
+        "verification_pass_rate": 0.0,
+        "weighted_quality_score": 0.0
+      },
+      "failure_category": "environment",
+      "failure_taxonomy_category": "environment"
+    }
+  ],
+  "unresolved_gaps": [
+    "environment_blocked: workspace_writable failed"
+  ],
+  "preflight": {
+    "status": "failed",
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "reason": "workspace_writable failed",
+    "checks": [
+      {
+        "name": "workspace_writable",
+        "passed": false,
+        "detail": "denied"
+      }
+    ]
+  }
+}

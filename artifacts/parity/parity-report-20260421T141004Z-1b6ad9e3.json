@@ -1,0 +1,183 @@
+{
+  "contract_version": "2026-04-18-perfect-parity-v1",
+  "generated_at": "2026-04-21T14:10:04.769693+00:00",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "success_rate": 1.0,
+  "capability_success_rate": 1.0,
+  "average_score": 1.0,
+  "quality_metrics": {
+    "decision_quality_score": 1.0,
+    "edit_correctness_score": 1.0,
+    "verification_pass_rate": 1.0,
+    "weighted_quality_score": 1.0
+  },
+  "quality_dimension_matrix": {
+    "decision_quality": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "edit_correctness": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "verification": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "weighted_quality": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    }
+  },
+  "capability_matrix": {
+    "tooling": {
+      "covered": true,
+      "passed": 1,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "orchestration": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "recovery": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "verification": {
+      "covered": true,
+      "passed": 1,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "subagent": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_navigation": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_refactor": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "mcp": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    }
+  },
+  "failure_breakdown": {
+    "environment": 0,
+    "runtime": 0,
+    "capability": 0
+  },
+  "failure_taxonomy": {
+    "model": 0,
+    "tool": 0,
+    "orchestration": 0,
+    "semantic": 0,
+    "verification": 0,
+    "environment": 0
+  },
+  "environment_failure_rate": 0.0,
+  "runtime_failure_rate": 0.0,
+  "capability_failure_rate": 0.0,
+  "details": [
+    {
+      "scenario": "simple-edit",
+      "status": "passed",
+      "reason": "real read-edit flow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "status_updated",
+          "passed": true
+        },
+        {
+          "name": "verification_inferred_assertions",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-simple-edit-ecbffef2320142d7bedf56d5ce648e89",
+        "results": [
+          {
+            "command": "inferred_assertions",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "duration_ms": 6.92,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    }
+  ],
+  "unresolved_gaps": [],
+  "preflight": {
+    "status": "passed",
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "reason": "ok",
+    "checks": [
+      {
+        "name": "workspace_writable",
+        "passed": true,
+        "detail": "workspace writable: D:\\ai-agent\\claude-code-py\\.parity-workspaces"
+      },
+      {
+        "name": "python_executable",
+        "passed": true,
+        "detail": "python executable available"
+      },
+      {
+        "name": "git_available",
+        "passed": true,
+        "detail": "git available"
+      },
+      {
+        "name": "shell_exec",
+        "passed": true,
+        "detail": "shell executable"
+      }
+    ]
+  }
+}

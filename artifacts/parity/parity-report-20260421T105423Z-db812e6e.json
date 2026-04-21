@@ -1,0 +1,328 @@
+{
+  "contract_version": "2026-04-18-perfect-parity-v1",
+  "generated_at": "2026-04-21T10:54:23.902445+00:00",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "success_rate": 1.0,
+  "capability_success_rate": 1.0,
+  "average_score": 1.0,
+  "quality_metrics": {
+    "decision_quality_score": 1.0,
+    "edit_correctness_score": 1.0,
+    "verification_pass_rate": 1.0,
+    "weighted_quality_score": 1.0
+  },
+  "quality_dimension_matrix": {
+    "decision_quality": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "edit_correctness": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "verification": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "weighted_quality": {
+      "score": 1.0,
+      "threshold": 0.9,
+      "passed": true
+    }
+  },
+  "capability_matrix": {
+    "tooling": {
+      "covered": true,
+      "passed": 3,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "orchestration": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "recovery": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "verification": {
+      "covered": true,
+      "passed": 3,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "subagent": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_navigation": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    },
+    "semantic_refactor": {
+      "covered": true,
+      "passed": 3,
+      "failed": 0,
+      "success_rate": 1.0
+    },
+    "mcp": {
+      "covered": false,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    }
+  },
+  "failure_breakdown": {
+    "environment": 0,
+    "runtime": 0,
+    "capability": 0
+  },
+  "failure_taxonomy": {
+    "model": 0,
+    "tool": 0,
+    "orchestration": 0,
+    "semantic": 0,
+    "verification": 0,
+    "environment": 0
+  },
+  "environment_failure_rate": 0.0,
+  "runtime_failure_rate": 0.0,
+  "capability_failure_rate": 0.0,
+  "details": [
+    {
+      "scenario": "blind_real_repo_task_01",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_01-8a5d7f31315d4349968bf95c4e5d62ff",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_01.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_01_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_01' in m and 'modern_blind_flow_01' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/memory/__init__.py), rename legacy_blind_flow_01 to modern_blind_flow_01 across module and usage files, then verify callsites.",
+      "duration_ms": 85.245,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_02",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_02-1e541bb25ef14548b103e970009a2645",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_02.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_02_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_02' in m and 'modern_blind_flow_02' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/editing/__init__.py), rename legacy_blind_flow_02 to modern_blind_flow_02 across module and usage files, then verify callsites.",
+      "duration_ms": 85.358,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    },
+    {
+      "scenario": "blind_real_repo_task_03",
+      "status": "passed",
+      "reason": "blind real repo task workflow executed",
+      "score": 1.0,
+      "checks": [
+        {
+          "name": "glob_located_files",
+          "passed": true
+        },
+        {
+          "name": "grep_located_target",
+          "passed": true
+        },
+        {
+          "name": "blind_module_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_usage_symbol_renamed",
+          "passed": true
+        },
+        {
+          "name": "blind_legacy_removed",
+          "passed": true
+        },
+        {
+          "name": "blind_context_written",
+          "passed": true
+        },
+        {
+          "name": "verification_command_1",
+          "passed": true
+        },
+        {
+          "name": "verification_all_passed",
+          "passed": true
+        }
+      ],
+      "verification": {
+        "status": "passed",
+        "workdir": "D:\\ai-agent\\claude-code-py\\.parity-workspaces\\parity-blind_real_repo_task_03-98ad29b938904f44b4aedd5391cbca6e",
+        "results": [
+          {
+            "command": "python -c \"from pathlib import Path; import sys; m=Path(r'src/blind_case_03.py').read_text(encoding='utf-8'); u=Path(r'src/blind_case_03_usage.py').read_text(encoding='utf-8'); sys.exit(0 if 'modern_blind_flow_03' in m and 'modern_blind_flow_03' in u else 1)\"",
+            "returncode": 0,
+            "passed": true,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      },
+      "quality_metrics": {
+        "decision_quality_score": 1.0,
+        "edit_correctness_score": 1.0,
+        "verification_pass_rate": 1.0,
+        "weighted_quality_score": 1.0
+      },
+      "task_prompt": "[BLIND] Using unseen source context (agent/subagents/catalog.py), rename legacy_blind_flow_03 to modern_blind_flow_03 across module and usage files, then verify callsites.",
+      "duration_ms": 89.696,
+      "decision_quality_score": 1.0,
+      "edit_correctness_score": 1.0,
+      "verification_pass_rate": 1.0
+    }
+  ],
+  "unresolved_gaps": [],
+  "preflight": {
+    "status": "passed",
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "reason": "ok",
+    "checks": [
+      {
+        "name": "workspace_writable",
+        "passed": true,
+        "detail": "workspace writable: D:\\ai-agent\\claude-code-py\\.parity-workspaces"
+      },
+      {
+        "name": "python_executable",
+        "passed": true,
+        "detail": "python executable available"
+      },
+      {
+        "name": "git_available",
+        "passed": true,
+        "detail": "git available"
+      },
+      {
+        "name": "shell_exec",
+        "passed": true,
+        "detail": "shell executable"
+      }
+    ]
+  }
+}

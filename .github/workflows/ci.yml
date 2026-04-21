@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main, feature/*]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Type check
+        run: bunx tsc --noEmit
+
+      - name: Test
+        run: bun test
+
+      - name: Build
+        run: bun run build
+
+  python-parity-gates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install pytest pytest-asyncio pyyaml
+
+      - name: Parity contract and realism gates
+        run: |
+          python -m pytest tests/python_agent/test_parity_report_contract.py tests/python_agent/test_parity_realism_pack.py tests/python_agent/test_parity_real_repo_tasks.py tests/python_agent/test_parity_e2e.py -q
+
+      - name: Full python_agent suite
+        run: |
+          python -m pytest tests/python_agent -q
+
+      - name: Generate parity metrics artifact
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from agent.parity.harness import run_parity_suite
+          from agent.parity.scenarios import SCENARIOS
+          output = Path("artifacts/parity/ci-parity-report.json")
+          report = run_parity_suite(SCENARIOS, report_path=output)
+          print("parity_total", report.get("total"))
+          print("parity_success_rate", report.get("success_rate"))
+          print("parity_weighted_quality_score", report.get("quality_metrics", {}).get("weighted_quality_score"))
+          print("parity_report_path", report.get("report_path"))
+          PY
+
+      - name: Upload parity artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: parity-report
+          path: artifacts/parity/ci-parity-report.json

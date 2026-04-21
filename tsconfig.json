@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "paths": {
+            "src/*": ["./src/*"],
+            "@claude-code-best/builtin-tools/*": ["./packages/builtin-tools/src/*"],
+            "@claude-code-best/builtin-tools": ["./packages/builtin-tools/src/index.ts"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "packages/**/*.ts", "packages/**/*.tsx"],
+    "exclude": ["node_modules"]
+}

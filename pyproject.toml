@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-full-tooling-agent"
+version = "0.1.0"
+description = "Python full-tooling agent contract implementation"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+addopts = "-q -p no:cacheprovider -p no:tmpdir"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests/python_agent"]
