@@ -30,3 +30,6 @@ __pycache__/
 logs
 
 data
+
+# Python agent temporary test artifacts
+tests/.tmp-python-agent/
